@@ -41,22 +41,22 @@ function generateMarkdown(answers) {
   - [Contact](#contact)
   - [License](#license)
   
-  ### Description(#table-of-contents)
+  ### [Description](#table-of-contents)
   - ${answers.description}
 
-  ### Installation(#table-of-contents)
+  ### [Installation](#table-of-contents)
   - ${answers.installation}
 
-  ### How-To(#table-of-contents)
+  ### [How-To](#table-of-contents)
   - ${answers.usage}
 
-  ### Contribution(#table-of-contents)
+  ### [Contribution](#table-of-contents)
   - ${answers.contributors}
 
-  ### Testing Instructions(#table-of-contents)
+  ### [Testing Instructions](#table-of-contents)
   - ${answers.tests}
 
-  ### Contact(#table-of-contents)
+  ### [Contact](#table-of-contents)
 
   Questions?
   Comments?
