@@ -50,6 +50,8 @@ function generateMarkdown(answers) {
   ### [How-To](#table-of-contents)
   - ${answers.usage}
 
+    ![README Generator gif](../assets/README Generator.gif)
+
   ### [Contribution](#table-of-contents)
   - ${answers.contributors}
 
