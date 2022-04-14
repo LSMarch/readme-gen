@@ -1,9 +1,8 @@
-// TODO: Include packages needed for this application
+
 const inquirer = require('inquirer')
 const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkdown.js')
-// TODO: Create an array of questions for user input
-// Created a promise holding prompt array
+
 
 const askUser = () => {
     return inquirer.prompt([        
@@ -55,7 +54,7 @@ const askUser = () => {
                 type: 'list',
                 name: 'license',
                 message: 'Would you like to add a license?',
-                choices: ['MIT', 'Apache 2.0', 'BSD 2', 'None'],
+                choices: ['mit', 'apache', 'bsd', 'None'],
                 
             },
             {
@@ -115,5 +114,5 @@ const init = () => {
 
 
 }
-// Function call to initialize app
+
 init();
