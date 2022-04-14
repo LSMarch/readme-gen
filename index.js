@@ -3,11 +3,11 @@ const inquirer = require('inquirer')
 const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkdown.js')
 // TODO: Create an array of questions for user input
+// Created a promise holding prompt array
 
 const askUser = () => {
     return inquirer.prompt([        
-    
-            {
+                {
                 type: 'input',
                 name: 'title',
                 message: 'What is the title of the project?',
@@ -16,8 +16,7 @@ const askUser = () => {
                         return console.log('Please enter a title')
                     }
                     return true;
-                }
-                
+                }                
             },
             {
                 type: 'input',
@@ -56,7 +55,7 @@ const askUser = () => {
                 type: 'list',
                 name: 'license',
                 message: 'Would you like to add a license?',
-                choices: ['MIT', 'Apache 2.0', 'BSD 2'],
+                choices: ['MIT', 'Apache 2.0', 'BSD 2', 'None'],
                 
             },
             {
@@ -107,84 +106,9 @@ const askUser = () => {
     ])
 }
 
-// Original code given for questions array
-
-
-// const questions = [
-    
-//         {
-//             type: 'input',
-//             name: 'title',
-//             message: 'What is the title of the project?',
-            
-//         },
-        // {
-        //     type: 'input',
-        //     name: 'description',
-        //     message: 'Give a brief description of the project',        
-        // },
-        // {
-        //     type: 'confirm',
-        //     name: 'toc',
-        //     message: 'Would you like a table of contents?'
-        // },
-        // {
-        //     type: 'input',
-        //     name: 'installation',
-        //     message: 'What are the instatllation instructions for the project?'
-        // },
-        // {
-        //     type: 'input',
-        //     name: 'usage',
-        //     message: 'How is the project meant to be used?'
-        // },
-        // {
-        //     type: 'list',
-        //     name: 'license',
-        //     message: 'Would you like to add a license?',
-        //     choices: ['MIT', 'Someother'],
-        //     default: 'MIT'
-        // },
-        // {
-        //     type: 'input',
-        //     name: 'contributors',
-        //     message: 'List anyone who contributed on the project.'
-        // },
-        // {
-        //     type: 'input',
-        //     name: 'tests',
-        //     message: 'Come back and figure this one out!!'
-        // },
-        // {
-        //     type: 'input',
-        //     name: 'questions',
-        //     message: 'Come back to this one too!!'
-        // },   
-//];
-
-// TODO: Create a function to write README file
-
-
-
-// function writeToFile(fileName, data) {
-//     // TODO: Create a function to write README file
-
-//     const readmeContent = generateMarkdown(data)
-//     fs.writeFile('README.md', readmeContent, (err) =>
-//     err ? console.log(err) : console.log('Successfully created README.md!')
-//     )    
-// }
-
-// TODO: Create a function to initialize app
-// function init() {
-//     return inquirer
-//     .prompt(questions)
-//     writeToFile('README.md', data)
-// }
-
 const init = () => {
 
-    askUser() //questions array into a promise
+    askUser() 
         .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
         .then(() => console.log('Succussfully created README.md!'))
         .catch((err) => console.error(err))

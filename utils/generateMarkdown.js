@@ -16,8 +16,7 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return `
-  # ${answers.title} ![Badge for license](https://img.shields.io/apm/l/vim-mode?style=plastic) 
-    
+  # ${answers.title} ![Badge for license](https://img.shields.io/apm/l/vim-mode?style=plastic)     
 
   ## Table of Contents
   - [Description](#description)
