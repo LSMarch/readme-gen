@@ -49,7 +49,7 @@ function generateMarkdown(answers) {
   Comments?
   Concerns?
     
-  - ${answers.github}
+  - [LSMarch](https://github.com/${answers.github})
   - ${answers.email}
 
   ### License
