@@ -32,7 +32,7 @@
   Comments?
   Concerns?
     
-  - LSMarch
+  - [LSMarch](https://github.com/LSMarch)
   - lsmarchetti01@gmail.com
 
   ### License
